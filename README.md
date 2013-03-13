@@ -1,4 +1,4 @@
 socialpy
 ========
 
-Proyecto sobre la interfaz socila en Django
+Proyecto sobre la interfaz social en Django
