@@ -1,4 +1,4 @@
-# Django settings for socialpy project.
+# Django settings for review project.
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -82,7 +82,7 @@ STATICFILES_FINDERS = (
 )
 
 # Make this unique, and don't share it with anybody.
-SECRET_KEY = 'liyhl=73r*rnn!=$=1v@1_x@9gzd+drlcwxyp9$@c6l#862%7#'
+SECRET_KEY = 'yit1-4goi%4*c5jb1yz@8m-cg^amg%r6k7grjgk@hmv&amp;-7k(fe'
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
@@ -101,10 +101,10 @@ MIDDLEWARE_CLASSES = (
     # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
-ROOT_URLCONF = 'socialpy.urls'
+ROOT_URLCONF = 'review.urls'
 
 # Python dotted path to the WSGI application used by Django's runserver.
-WSGI_APPLICATION = 'socialpy.wsgi.application'
+WSGI_APPLICATION = 'review.wsgi.application'
 
 TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".

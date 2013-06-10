@@ -1,4 +1,4 @@
-socialpy
+review-py
 ========
 
-Proyecto sobre la interfaz social en Django
+Proyecto sobre review en Django
