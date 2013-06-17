@@ -13,4 +13,9 @@ urlpatterns = patterns('',
 
     # Uncomment the next line to enable the admin:
     url(r'^admin/', include(admin.site.urls)),
+    
+    #Url para content app:
+    url(r'^$','content.views.index'),
+    #Regexp con parametros que se le pasaran a la vista
+    url(r'^params/(?P<algun_id>\d+)/$','content.views.params'),
 )

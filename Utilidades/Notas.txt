@@ -1,0 +1,45 @@
+/*APPS*/
+
+Nota 0 (sobre nuevas applicaciones en un proyecto): 
+Cada vez que se crea un aplicacion se debe indicar a Django que
+hay una nueva App y esto se hace en el archivo general settings.py en la
+seccion de INSTALLED_APPS y se le agrega a la tupla el nombre de la app
+al momento de ejecutar:
+    $ python manage.py startapp NOMBRE
+
+
+/*MODELOS*/
+
+Nota 0 (Sobre la definicion de modelos en las apps.) :
+Para la creacion de modelos Django abstrae todo para que no importe mucho
+que base de datos es la que se esta usando.
+Cada App en este caso "content" tiene un archivo por defecto llamado
+Models.py que es donde se debe de definir el modelo que usa la app, una
+causa de que no importe la base de datos a usar es que se definio una
+sintaxis para indicar como queremos la base de datos en esta misma carpeta
+hay una chuleta sobre esto y aqui un link:
+https://docs.djangoproject.com/en/1.4/ref/models/fields/
+
+Nota 1 (Debuggeo de los modelos escritos): 
+una vez definido un model es posible verificar que Django creara el modelo
+tal como lo esperamos:
+    $ python manage.py sql Nombre-de-la-app-donde-esta-el-models
+
+Este comando mostrara el SQL dependiendo de que monotor se este usando
+que se usara para crear las tablas (OJO solo lo muestra mas no lo hace.)
+mas debugg:
+    
+    $ python manage.py validate NombreApp #Busca errores en la definicion de los modelos
+    
+    $ python manage.py sqlcustom NombreApp #muestra sentencias definida a mano (no en models)
+    
+    $ python manage.py sqlclear NombreApp #muestra la sentencia sql necesaria para borrar las tablas de la app
+    Importante: todas estas simplemente muestran lo que se haria mas NO lo
+    hace.
+
+Nota 2: (Crear las tablas definidas en los modelos):
+    $ python manage.py syncdb
+Creara las tablas definidas en los modelos que se encuentren en la tupla
+INSTALLED_APPS.
+
+/*ENDMODELOS*/
