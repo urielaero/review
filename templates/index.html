@@ -1,2 +1,12 @@
-<p> asfasfdada </p>
-<script src='{{STATIC_URL}}index.js'></script>
+{% extends 'base.html' %}
+{# Indicas que heredara de la base #}
+
+{% block title %}
+    {{title}}
+{% endblock %}
+
+{# todo el contedido de content#}
+{% block main %}
+    <b>{{unaVariable}}</b>    {#Es la forma en la que identifica las variables que se le pasen#}
+    <p>soy index.html</p>
+{% endblock %}

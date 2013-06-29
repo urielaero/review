@@ -12,8 +12,11 @@ def index(request):
         'latest_poll_list':unaVar,
     })
     return HttpResponse(t.render(c))"""
-    a = {'a':1,'b':2}
-    return render_to_response('index.html',{'r':a},context_instance=RequestContext(request))
+    unaVar = {'a':1,'b':2}
+    b = "hola munod en la plantilla index"
+    return render_to_response('index.html',{'unaVariable':unaVar,'title':b},context_instance=RequestContext(request))
+    #sin el context se muere lo que tenga la carpeta en static
+    #return render_to_response('index.html',{'r':a,'title':b})
 
 def params(request,algun_id):
     return HttpResponse("Algun id: %s" % algun_id)

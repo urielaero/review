@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='utf-8'>
+    <title>{% block title %} Plantilla base {% endblock %}</title>
+    <script src='{{STATIC_URL}}js/main.js'></script>
+    <link media='all' rel='stylesheet' href='{{STATIC_URL}}css/main.css' type='text/css' />
+</head>
+<body>
+    <div id='wrap'>
+        <div id='main'>
+            {% block main %}
+                <h1> Sin contenido</h1>
+            {% endblock %}
+        </div>
+    </div>
+    <div id='footer'>
+        <p>Aqui se definira todo el footer</p>
+    </div>
+</body>
+
+</html>
