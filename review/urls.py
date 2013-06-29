@@ -15,7 +15,9 @@ urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
     
     #Url para content app:
+    url(r'ejemplo/','content.views.ejemplo1'),
     url(r'^$','content.views.index'),
+
     #Regexp con parametros que se le pasaran a la vista
     url(r'^params/(?P<algun_id>\d+)/$','content.views.params'),
 )
