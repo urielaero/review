@@ -9,13 +9,45 @@
 <body>
     <div id='wrap'>
         <div id='main'>
+            <div id='header'>
+                <div class='logo'>
+                    <p>Aqui ira el logo</p>
+                </div>
+                <form action='' id='search'>
+                    <input id='' name='' type='text' placeholder='Search for reviews, articles and more'/>
+                    <input type='submit' value='' />
+                </form>
+                <div class='login'>
+                    <div class='url'>
+                        <a href='#'>Login |</a>
+                        <a href='#'>Register</a>
+                     </div>
+                </div>
+            </div>
             {% block main %}
                 <h1> Sin contenido</h1>
             {% endblock %}
         </div>
     </div>
     <div id='footer'>
-        <p>Aqui se definira todo el footer</p>
+        <div class='logoFooter'>
+            <p>Aqui ira el logo del footer</p>
+        </div>
+        <div class="info">
+        <ul class='pages'>
+                <li><a href=''>About Us</a>|</li>
+                <li><a href=''>Contact Us</a>|</li>
+                <li><a href=''>Advertising</a>|</li>
+                <li><a href=''>Send a message</a>|</li>
+                <li><a href=''>Terms of Use</a></li>
+            </ul>
+            <ul class='social'>
+                <li class='term'>2013 revius | All right reserved</li>
+                <li>Follow us:</li>
+                <li><span class="icon"></span></li>
+                <li><span class="icon"></span></li>
+            </ul>
+        </div>
     </div>
 </body>
 

@@ -1,2 +1,65 @@
 @import url('normalize.css');
 @import url('stickyFooter.css');
+
+a{text-decoration:none;color:inherit;}
+input{border:none;}
+ul{list-style:none;}
+/*Header*/
+#header{
+    width:100%;
+    overflow:hidden;
+    background-color:#666;
+    //height:55px; sin height fijos
+}
+#header .logo{
+    float:left;
+    width:33%
+}
+#header form#search{
+    width:33%;
+    float:left;
+    border:2px solid black;
+    background-color:white;
+    margin-top:12px;
+    height:30px;
+    margin:12px 0;
+}
+#header form#search input[type='text']{
+    width:80%;
+    border:none;
+    height:100%
+}
+#header form#search input[type='submit']{
+    float:right;
+    width:15%;
+    height:100%;
+}
+#header .login{
+    width:33%;
+    height:100%;
+    //display:inline-block;
+    //vertical-align:top;
+    float:right;
+}
+#header .login .url{
+    background-color:#00aaf3;
+    height:80%;
+    width:150px;
+    text-align:center;
+    line-height:40px;
+    float:right;
+}
+#header .login .url a{
+    color:white;
+    font-weight:bold;
+}
+
+/*Footer*/
+#footer{overflow:hidden;padding:0 10%;color:#636363;font-weight:bold;}
+#footer .logoFooter{width:15%;float:left;}
+#footer .info{float:left;width:80%;}
+#footer .pages{display:block;margin:0 auto;width:80%;}
+#footer .pages li{display:inline-block;vertical-align:top;}
+#footer .social{width:10%float:left;overflow:hidden;}
+#footer .social li{float:right;}
+#footer .social li.term{float:left;}
