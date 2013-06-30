@@ -1,9 +1,11 @@
 @import url('normalize.css');
 @import url('stickyFooter.css');
 
+html{font-family: 'Droid Sans', sans-serif;}
 a{text-decoration:none;color:inherit;}
 input{border:none;}
 ul{list-style:none;}
+hr{border:none;}
 /*Header*/
 #header{
     width:100%;
@@ -55,11 +57,85 @@ ul{list-style:none;}
 }
 
 /*Footer*/
-#footer{overflow:hidden;padding:0 10%;color:#636363;font-weight:bold;}
-#footer .logoFooter{width:15%;float:left;}
-#footer .info{float:left;width:80%;}
-#footer .pages{display:block;margin:0 auto;width:80%;}
-#footer .pages li{display:inline-block;vertical-align:top;}
-#footer .social{width:10%float:left;overflow:hidden;}
+#footer{
+    overflow:hidden;
+    padding:0 10%;
+    color:#636363;
+    font-weight:bold;
+}
+#footer .logoFooter{
+    width:15%;
+    float:left;
+}
+#footer .info{
+    float:left;
+    width:80%;
+}
+#footer .pages{
+    display:block;
+    margin:0 auto;
+    width:80%;
+    text-align:center;
+}
+#footer .pages li{
+    display:inline-block;
+    vertical-align:top;
+}
+#footer .social{overflow:hidden;}
 #footer .social li{float:right;}
 #footer .social li.term{float:left;}
+
+/*Home*/
+.content.home{
+    padding:3% 0;
+    width:80%;
+    margin:0 auto;
+    color:#666;
+    font-weight:bold;
+}
+.content.home .review{
+    display:inline-block;
+    width:24%;
+    min-width:120px;
+}
+.content.home .review p{padding:3% 6%;}
+.content.home .review .tags li{padding:5% 6%;}
+.content.home .review .name{color:black}
+.content.home .review hr{
+    border-bottom:2px solid #e9e9e9;
+    width:95%;
+    margin:0 auto;
+}
+.content.home .review .tags{
+    height:32px;
+    overflow:hidden;
+    width:60%;
+    display:inline-block;
+    vertical-align:top;
+    position:relative
+}
+.content.home .review .tags ul{
+    position:absolute;
+    background-color:#dadada;
+    width:100%;
+}
+.content.home .review .tags.on{overflow:visible;}
+.content.home .review .data{
+    vertical-align:top;
+    display:inline-block;
+    padding:3%;
+}
+.content.home .review .wrapper{background-color:#dadada;}
+.content.home .loadMore{
+    width:100%;
+    margin:1% 0;
+}
+.content.home .loadMore a{
+    width:10%;
+    margin:0 auto;
+    display:block;
+    color:white;
+    background-color:red;
+    text-align:center;
+    padding:1%;
+}

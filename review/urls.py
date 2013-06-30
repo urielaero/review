@@ -16,7 +16,8 @@ urlpatterns = patterns('',
     
     #Url para content app:
     url(r'ejemplo/','content.views.ejemplo1'),
-    url(r'^$','content.views.index'),
+    url(r'^$','content.views.index'),#el home
+    url(r'^moreReviews/','content.views.moreReviews'),
 
     #Regexp con parametros que se le pasaran a la vista
     url(r'^params/(?P<algun_id>\d+)/$','content.views.params'),

@@ -2,39 +2,43 @@
 <html lang='en'>
 <head>
     <meta charset='utf-8'>
-    <title>{% block title %} Plantilla base {% endblock %}</title>
+    <title>{{title}}</title>
+
+    <script src='{{STATIC_URL}}js/jquery.js'></script>
     <script src='{{STATIC_URL}}js/main.js'></script>
     <link media='all' rel='stylesheet' href='{{STATIC_URL}}css/main.css' type='text/css' />
+    <link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
+
 </head>
 <body>
-    <div id='wrap'>
-        <div id='main'>
-            <div id='header'>
-                <div class='logo'>
-                    <p>Aqui ira el logo</p>
-                </div>
-                <form action='' id='search'>
-                    <input id='' name='' type='text' placeholder='Search for reviews, articles and more'/>
-                    <input type='submit' value='' />
-                </form>
-                <div class='login'>
-                    <div class='url'>
-                        <a href='#'>Login |</a>
-                        <a href='#'>Register</a>
-                     </div>
+    <div id='wrap'><div id='main'>
+        <div id='header'>
+            <div class='logo'>
+                <p>Aqui ira el logo</p>
+            </div>
+            <form action='' id='search'>
+                <input id='' name='' type='text' placeholder='Search for reviews, articles and more'/>
+                <input type='submit' value='' />
+            </form>
+            <div class='login'>
+                <div class='url'>
+                    <a href='#'>Login |</a>
+                    <a href='#'>Register</a>
                 </div>
             </div>
+        </div>
+        <div class='content {{current_page}}'>
             {% block main %}
                 <h1> Sin contenido</h1>
             {% endblock %}
         </div>
-    </div>
+    </div></div>
     <div id='footer'>
         <div class='logoFooter'>
             <p>Aqui ira el logo del footer</p>
         </div>
-        <div class="info">
-        <ul class='pages'>
+        <div class='info'>
+            <ul class='pages'>
                 <li><a href=''>About Us</a>|</li>
                 <li><a href=''>Contact Us</a>|</li>
                 <li><a href=''>Advertising</a>|</li>
@@ -44,11 +48,10 @@
             <ul class='social'>
                 <li class='term'>2013 revius | All right reserved</li>
                 <li>Follow us:</li>
-                <li><span class="icon"></span></li>
-                <li><span class="icon"></span></li>
+                <li><span class='icon'></span></li>
+                <li><span class='icon'></span></li>
             </ul>
         </div>
     </div>
 </body>
-
 </html>

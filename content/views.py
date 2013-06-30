@@ -5,11 +5,18 @@ from django.template import RequestContext
 from django.shortcuts import render_to_response
 
 def index(request):
+    count = range(8)
     arguments ={
-        'title': 'Welcome to review'
+        'current_page':'home',
+        'title': 'Welcome to review',
+        'numberReviews':count
     }
     return render_to_response('index.html',arguments,context_instance=RequestContext(request))
 
+def moreReviews(request):
+    count = range(4)
+    arguments = {'numberReviews':count}
+    return render_to_response('moreReviews.html',arguments,context_instance=RequestContext(request))
 
 def ejemplo1(request):
     #return HttpResponse("Primera vista")

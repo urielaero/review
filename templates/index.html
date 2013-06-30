@@ -1,14 +1,14 @@
 {% extends 'base.html' %}
 {# Indicas que heredara de la base #}
 
-{% block title %}
-    {{title}}
-{% endblock %}
-
-{# todo el contedido de content#}
+{# todo el contedido de content #}
 {% block main %}
-    <div class="content home">
-        <b>{{unaVariable}}</b>    {#Es la forma en la que identifica las variables que se le pasen#}
-        <p>soy index.html</p>
+    <div class="reviews">
+        {% for x in numberReviews%}
+        {%include 'reviews.html'%}
+        {%endfor%}
+    </div>
+    <div class='loadMore'>
+        <a href='#'>Load more</a>
     </div>
 {% endblock %}
