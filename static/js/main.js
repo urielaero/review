@@ -1,11 +1,11 @@
 $(document).on('ready',function(){
 
-    $('.tags').on('click',review.showTags);//los mobils no tienen hover
+    $('.content.home').on('click',review.showTags,'.tags');//los mobiles no tienen hover
     //$('.tags').hover(review.showTags,review.showTags);
-    $('.tags').on({
+    $('.content.home').on({
         mouseenter:review.showTags,
         mouseleave:review.showTags
-    })
+    },'.tags')//modo 'vivo' por los que se cargan despues
     $('.loadMore').on('click',review.loadMore);
 });
 
