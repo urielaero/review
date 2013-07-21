@@ -2,11 +2,19 @@ $(document).on('ready',function(){
 
     $('.content.home').on('click',review.showTags,'.tags');//los mobiles no tienen hover
     //$('.tags').hover(review.showTags,review.showTags);
+    /*
     $('.content.home').on({
         mouseenter:review.showTags,
         mouseleave:review.showTags
     },'.tags');//modo 'vivo' por los que se cargan despues
+    */
+    //header
+    $('form#search .triangle').on('click',function(){
+        $(this).parent().submit();
+    });
+
     $('.loadMore').on('click',review.loadMore);
+
 });
 
 

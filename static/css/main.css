@@ -1,22 +1,41 @@
 @import url('normalize.css');
 @import url('stickyFooter.css');
 
-html{font-family: 'Droid Sans', sans-serif;}
+html{font-family: 'Droid Sans', sans-serif;font-size:100%;}
 a{text-decoration:none;color:inherit;}
 input{border:none;}
 ul{list-style:none;}
 hr{border:none;}
+.clear{clear:both;}
+.circle{border-radius:50%;}
 /*Header*/
 #header{
     width:100%;
-    overflow:hidden;
     background-color:#666;
+    //overflow:hidden; using clear
     //height:55px; sin height fijos
 }
 #header .logo{
     float:left;
-    width:33%
+    width:33%;
+    height:2px;
+    position:relative;
 }
+#header .logo .circle{
+    background-color:#e00022;
+    position:absolute;
+    width:47%;
+    height:114px;
+    top:-100px;
+    padding:45px;
+}
+.logo img{width:100%;}
+#header .logo .circle img{
+    margin-top:58px;
+}
+
+.logo p{font-size:.7em;text-align:centeR;font-weight:bold;color:white;}
+
 #header form#search{
     width:33%;
     float:left;
@@ -25,16 +44,28 @@ hr{border:none;}
     margin-top:12px;
     height:30px;
     margin:12px 0;
+    position:relative;
 }
 #header form#search input[type='text']{
     width:80%;
     border:none;
-    height:100%
+    height:100%;
+    padding-left:2px;
 }
 #header form#search input[type='submit']{
     float:right;
     width:15%;
     height:100%;
+}
+#header form#search .triangle{
+    content:'';
+    border:12px solid transparent;
+    border-left-color:black;
+    position:absolute;
+    display:block;
+    right:0;
+    top:2px;
+    cursor:pointer;
 }
 #header .login{
     width:33%;
@@ -63,10 +94,19 @@ hr{border:none;}
     color:#636363;
     font-weight:bold;
 }
-#footer .logoFooter{
-    width:15%;
-    float:left;
+#footer hr{
+    width:100%;
+    height:1px;
+    background-color:#b0b0b0;
+    margin-bottom:5px;
 }
+#footer .logo.Footer{
+    width:12%;
+    float:left;
+    background-color:#e00022;
+    padding:2px 3px 8px;
+}
+#footer .logo.Footer p{font-size:.5em;}
 #footer .info{
     float:left;
     width:80%;
@@ -81,9 +121,12 @@ hr{border:none;}
     display:inline-block;
     vertical-align:top;
 }
-#footer .social{overflow:hidden;}
+#footer .social{
+    overflow:hidden;
+    margin-top:27px;
+}
 #footer .social li{float:right;}
-#footer .social li.term{float:left;}
+#footer .social li.term{float:left;font-size:.8em;margin-left:9px;}
 
 /*Home*/
 .content.home{
@@ -97,7 +140,10 @@ hr{border:none;}
     display:inline-block;
     width:24%;
     min-width:120px;
+    box-shadow:2px -3px 10px 0px gray;
+    margin-bottom:9px;
 }
+.content.home .review img{width:100%;}
 .content.home .review p{padding:3% 6%;}
 .content.home .review .tags li{padding:5% 6%;}
 .content.home .review .name{color:black}
@@ -135,7 +181,7 @@ hr{border:none;}
     margin:0 auto;
     display:block;
     color:white;
-    background-color:red;
+    background-color:#e00022;
     text-align:center;
     padding:1%;
 }

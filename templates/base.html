@@ -2,6 +2,7 @@
 <html lang='en'>
 <head>
     <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width' />
     <title>{{title}}</title>
 
     <script src='{{STATIC_URL}}js/jquery.js'></script>
@@ -14,11 +15,16 @@
     <div id='wrap'><div id='main'>
         <div id='header'>
             <div class='logo'>
-                <p>Aqui ira el logo</p>
+                <div class='circle'>
+                    <img src='{{STATIC_URL}}img/logo.png' alt='revius' />
+                    <p>REVIEWING THE INTERNET</p>                                
+                </div>
+                <div class='clear'></div>
             </div>
             <form action='' id='search'>
                 <input id='' name='' type='text' placeholder='Search for reviews, articles and more'/>
                 <input type='submit' value='' />
+                <div class='triangle'></div>
             </form>
             <div class='login'>
                 <div class='url'>
@@ -26,7 +32,8 @@
                     <a href='#'>Register</a>
                 </div>
             </div>
-        </div>
+            <div class='clear'></div>
+        </div><!--Header-->
         <div class='content {{current_page}}'>
             {% block main %}
                 <h1> Sin contenido</h1>
@@ -34,8 +41,10 @@
         </div>
     </div></div>
     <div id='footer'>
-        <div class='logoFooter'>
-            <p>Aqui ira el logo del footer</p>
+        <hr /> 
+        <div class='logo Footer'>
+            <img src='{{STATIC_URL}}img/logo.png' alt='revius' />
+            <p>REVIEWING THE INTERNET</p>
         </div>
         <div class='info'>
             <ul class='pages'>
@@ -46,7 +55,7 @@
                 <li><a href=''>Terms of Use</a></li>
             </ul>
             <ul class='social'>
-                <li class='term'>2013 revius | All right reserved</li>
+                <li class='term'>2013 revyus | All right reserved</li>
                 <li>Follow us:</li>
                 <li><span class='icon'></span></li>
                 <li><span class='icon'></span></li>
