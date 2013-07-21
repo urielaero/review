@@ -138,10 +138,10 @@ hr{border:none;}
 }
 .content.home .review{
     display:inline-block;
-    width:24%;
     min-width:120px;
     box-shadow:2px -3px 10px 0px gray;
-    margin-bottom:9px;
+    width:20%;
+    margin:16px;
 }
 .content.home .review img{width:100%;}
 .content.home .review p{padding:3% 6%;}
